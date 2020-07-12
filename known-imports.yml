@@ -334,6 +334,7 @@ imports:
   uuid:
     module: uuid
     name: v4
+  Link: gatsby
 whitelist:
   - directory: src/
     allowed: [filename, named]
