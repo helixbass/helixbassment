@@ -1,18 +1,11 @@
 import React from 'react'
 import {flowMax, addDisplayName} from 'ad-hok'
-import {artNouveauFontStyles} from 'utils/typography'
-import colors from 'utils/colors'
+import Layout from 'components/Layout'
 
 const Home = flowMax(addDisplayName('Home'), () => (
-  <div css={styles.header}>Hello worldz!</div>
+  <Layout>
+    <div>Hello worldz!</div>
+  </Layout>
 ))
 
 export default Home
-
-const styles = {
-  header: {
-    ...artNouveauFontStyles,
-    color: colors.white,
-    backgroundColor: colors.green,
-  },
-}

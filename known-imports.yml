@@ -335,6 +335,8 @@ imports:
     module: uuid
     name: v4
   Link: gatsby
+  Global: '@emotion/core'
+  css: '@emotion/core'
 whitelist:
   - directory: src/
     allowed: [filename, named]

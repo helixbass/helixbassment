@@ -8,6 +8,10 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
+      resolve: 'gatsby-plugin-emotion',
+      options: {},
+    },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         typekit: {
@@ -21,6 +25,7 @@ module.exports = {
         root: './src',
         aliases: {
           utils: './utils',
+          components: './components',
         },
       },
     },
