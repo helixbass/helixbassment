@@ -1,0 +1,15 @@
+parser: babel-eslint
+plugins:
+  - prettier
+  - known-imports
+  - ad-hok
+extends:
+  - prettier
+  - react-app
+  - plugin:known-imports/recommended-react
+  - plugin:ad-hok/recommended
+rules:
+  prettier/prettier: error
+  ad-hok/require-adddisplayname: error
+settings:
+  ad-hok/should-fix-flow-flowmax: true

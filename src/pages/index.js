@@ -1,5 +1,6 @@
-import React from "react"
+import React from 'react'
+import {flowMax, addDisplayName} from 'ad-hok'
 
-export default function Home() {
-  return <div>Hello world!</div>
-}
+const Home = flowMax(addDisplayName('Home'), () => <div>Hello worldz!</div>)
+
+export default Home
