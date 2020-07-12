@@ -18,6 +18,8 @@
     "ad-hok": "^0.1.0",
     "ad-hok-utils": "^0.0.4",
     "gatsby": "^2.23.12",
+    "gatsby-plugin-module-resolver": "^1.0.3",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
