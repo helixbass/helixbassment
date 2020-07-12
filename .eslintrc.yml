@@ -3,6 +3,7 @@ plugins:
   - prettier
   - known-imports
   - ad-hok
+  - styles-object
 extends:
   - prettier
   - react-app
@@ -11,5 +12,7 @@ extends:
 rules:
   prettier/prettier: error
   ad-hok/require-adddisplayname: error
+  styles-object/no-unused-styles: error
+  styles-object/no-undef-styles: error
 settings:
   ad-hok/should-fix-flow-flowmax: true
