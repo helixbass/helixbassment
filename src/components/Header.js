@@ -1,8 +1,8 @@
 import React from 'react'
-import {flowMax, addDisplayName, addProps} from 'ad-hok'
+import {flowMax, addDisplayName} from 'ad-hok'
 import {artNouveauFontStyles} from 'utils/typography'
 import colors from 'utils/colors'
-import {graphql, useStaticQuery} from 'gatsby'
+import addSiteMetadata from 'utils/addSiteMetadata'
 
 const LEAF_NATURAL_WIDTH = 359.6
 const LEAF_NATURAL_HEIGHT = 227.3
@@ -76,24 +76,8 @@ const BottomBorder = flowMax(addDisplayName('BottomBorder'), () => (
 
 const Header = flowMax(
   addDisplayName('Header'),
-  addProps(() =>
-    useStaticQuery(
-      graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `
-    )
-  ),
-  ({
-    site: {
-      siteMetadata: {title},
-    },
-  }) => (
+  addSiteMetadata,
+  ({siteMetadata: {title}}) => (
     <h1 css={styles.container}>
       <span css={styles.text}>
         {title}
