@@ -5,7 +5,8 @@ import {Global, css} from '@emotion/core'
 
 import '../reset.css'
 import Header, {HEADER_HEIGHT} from 'components/Header'
-import {bodyFontFamily} from 'utils/typography'
+import {bodyFontFamily, headingFontFamily} from 'utils/typography'
+import Footer from 'components/Footer'
 
 const Layout = flowMax(addDisplayName('Layout'), ({children}) => (
   <>
@@ -19,12 +20,26 @@ const Layout = flowMax(addDisplayName('Layout'), ({children}) => (
         * {
           box-sizing: border-box;
         }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: ${headingFontFamily}, sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        p {
+          font-size: 18px;
+        }
       `}
     />
     <div>
       <Header />
       <div css={styles.pageContainer}>
         <div css={styles.pageInnerContainer}>{children}</div>
+        <Footer />
       </div>
     </div>
   </>
@@ -46,6 +61,7 @@ const styles = {
     width: '100%',
     maxWidth: 1200,
     display: 'flex',
+    flexDirection: 'column',
     flex: 1,
     borderColor: colors.black,
     borderWidth: 4,

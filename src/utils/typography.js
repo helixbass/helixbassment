@@ -1,5 +1,7 @@
 export const artNouveauFontFamily = 'Carilliantine'
-export const headingFontFamily = 'futura-pt-bold'
+// export const headingFontFamily = 'futura-pt-bold'
+// export const headingFontFamily = 'futura-pt-condensed'
+export const headingFontFamily = 'le-havre'
 export const bodyFontFamily = 'brandon-grotesque'
 
 export const artNouveauFontStyles = {
