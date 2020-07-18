@@ -10,7 +10,7 @@ export default Footer
 
 const styles = {
   container: {
-    minHeight: 280,
+    minHeight: 140,
     backgroundColor: colors.black,
     alignSelf: 'stretch',
   },

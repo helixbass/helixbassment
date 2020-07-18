@@ -8,21 +8,19 @@ import colors from 'utils/colors'
 const PostLink = flowMax(
   addDisplayName('PostLink'),
   addProps(({post: {frontmatter: {title}}}) => ({
-    // fields: {slug}
-    // title: title || slug,
     title,
   })),
   ({
     post: {
       frontmatter: {date, description},
-      // fields: {slug},
+      fields: {slug},
       excerpt,
     },
     title,
   }) => (
     <div css={styles.postContainer}>
       <h3 css={styles.title}>
-        <Link to={`/blog/${'slug'}`}>{title}</Link>
+        <Link to={`/blog${slug}`}>{title}</Link>
       </h3>
       <small css={styles.date}>{date}</small>
       <p dangerouslySetInnerHTML={{__html: description || excerpt}} />
@@ -57,9 +55,9 @@ export const query = graphql`
         node {
           id
           excerpt
-          #fields {
-          #  slug
-          #}
+          fields {
+            slug
+          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
