@@ -2,6 +2,8 @@ import React from 'react'
 import {flowMax, addDisplayName} from 'ad-hok'
 import {artNouveauFontStyles} from 'utils/typography'
 import colors from 'utils/colors'
+import {graphql} from 'gatsby'
+import addStaticQuery from 'utils/addStaticQuery'
 
 const LEAF_NATURAL_WIDTH = 359.6
 const LEAF_NATURAL_HEIGHT = 227.3
@@ -73,16 +75,34 @@ const BottomBorder = flowMax(addDisplayName('BottomBorder'), () => (
   </svg>
 ))
 
-const Header = flowMax(addDisplayName('Header'), () => (
-  <h1 css={styles.container}>
-    <span css={styles.text}>
-      Helixbassment
-      <LeftLeaf />
-      <RightLeaf />
-    </span>
-    <BottomBorder />
-  </h1>
-))
+const Header = flowMax(
+  addDisplayName('Header'),
+  addStaticQuery({
+    query: graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `,
+  }),
+  ({
+    site: {
+      siteMetadata: {title},
+    },
+  }) => (
+    <h1 css={styles.container}>
+      <span css={styles.text}>
+        {title}
+        <LeftLeaf />
+        <RightLeaf />
+      </span>
+      <BottomBorder />
+    </h1>
+  )
+)
 
 export default Header
 

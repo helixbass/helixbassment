@@ -335,6 +335,8 @@ imports:
     module: uuid
     name: v4
   Link: gatsby
+  useStaticQuery: gatsby
+  graphql: gatsby
   Global: '@emotion/core'
   css: '@emotion/core'
 whitelist:

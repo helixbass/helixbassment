@@ -5,6 +5,7 @@ import {Global, css} from '@emotion/core'
 
 import '../reset.css'
 import Header, {HEADER_HEIGHT} from 'components/Header'
+import {bodyFontFamily} from 'utils/typography'
 
 const Layout = flowMax(addDisplayName('Layout'), ({children}) => (
   <>
@@ -13,6 +14,7 @@ const Layout = flowMax(addDisplayName('Layout'), ({children}) => (
         html {
           background-color: ${colors.green};
           color: ${colors.black};
+          font-family: ${bodyFontFamily}, sans-serif;
         }
         * {
           box-sizing: border-box;
