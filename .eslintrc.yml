@@ -14,5 +14,6 @@ rules:
   ad-hok/require-adddisplayname: error
   styles-object/no-unused-styles: error
   styles-object/no-undef-styles: error
+  react-hooks/rules-of-hooks: off
 settings:
   ad-hok/should-fix-flow-flowmax: true
