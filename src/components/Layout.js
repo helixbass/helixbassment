@@ -59,6 +59,7 @@ const Layout = flowMax(addDisplayName('Layout'), ({children}) => (
           font-size: 1.125rem;
           line-height: 1.4375rem;
           margin-bottom: 1.3125rem;
+          max-width: 38rem;
         }
         pre,
         code {
@@ -102,6 +103,8 @@ const Layout = flowMax(addDisplayName('Layout'), ({children}) => (
         }
         li {
           font-size: 1.125rem;
+          line-height: 1.4375rem;
+          max-width: 38rem;
         }
         ol li {
           margin-bottom: 2rem;
