@@ -52,7 +52,7 @@ const Example = flow(
 )
 ```
 #### Following the flow of props
-The thing that's "flowing down the pipeline" is a props object. At the beginning of the chain, it's just the props that got passed to your component. So for example, if we render `Example` like this:
+The thing that's "flowing down the pipeline" is a *props object*. At the beginning of the chain, it's just the props that got passed to your component. So for example, if we render `Example` like this:
 ```js
 <Example message="woops" />
 ```
@@ -178,7 +178,7 @@ const FriendStatus = flow(
 ```
 What's new here?
 
-1. we use `addHandlers()` to add a `handleStatusChange()` helper to the props object. Notice how `handleStatusChange()`
+1. We use `addHandlers()` to add a `handleStatusChange()` helper to the props object. Notice how `handleStatusChange()`
 is also able to access its dependency `setIsOnline`
 
 2. The `FriendStatus` component is expecting to be passed a `friend` prop. Notice how the effect handler is able to access
@@ -235,4 +235,4 @@ const FriendStatusWithCounter = flow(
 ### Keep learning!
 
 You can do a lot with `addState()`, `addEffect()` and `addHandlers()`. But just as there are [more React hooks](https://reactjs.org/docs/hooks-reference.html), `ad-hok` has lots of other useful helpers. Explore the
-[`ad-hok` documentation](https://github.com/helixbass/ad-hok), and [file an issue](https://github.com/helixbass/ad-hok/issues) if you have any questions or need any help :sparkles:
+[`ad-hok` documentation](https://github.com/helixbass/ad-hok), and [file an issue](https://github.com/helixbass/ad-hok/issues) if you have any questions or need any help ✨

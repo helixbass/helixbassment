@@ -78,14 +78,14 @@ const Header = flowMax(
   addDisplayName('Header'),
   addSiteMetadata,
   ({siteMetadata: {title}}) => (
-    <h1 css={styles.container}>
+    <div css={styles.container}>
       <span css={styles.text}>
         {title}
         <LeftLeaf />
         <RightLeaf />
       </span>
       <BottomBorder />
-    </h1>
+    </div>
   )
 )
 
